@@ -3,12 +3,12 @@
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta property="og:title" content="Components: Messages - Wikimedia Design Style Guide (WikimediaUI)">
+	<meta property="og:title" content="Components: Progress indicators - Wikimedia Design Style Guide (WikimediaUI)">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://design.wikimedia.org/style-guide/components/messages.html">
+	<meta property="og:url" content="https://design.wikimedia.org/style-guide/components/links.html">
 	<meta property="og:image" content="https://design.wikimedia.org/style-guide/img/design-style-guide.png">
 	<link rel="stylesheet" href="../css/build/wmui-style-guide.min.css">
-	<title>Components: Messages – Wikimedia Design Style Guide</title>
+	<title>Components: Progress indicators – Wikimedia Design Style Guide</title>
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bjs--off\b/,'js--on');
 	</script>
@@ -17,7 +17,7 @@
 	<script src="../js/matomo-tracking.min.js"></script>
 	<script src="../js/wikimedia-design-style-guide.min.js" async></script>
 </head>
-<body class="page--components page--components-messages" vocab="http://schema.org/" typeof="WebPage">
+<body class="page--components page--components-progress-indicators" vocab="http://schema.org/" typeof="WebPage">
 	<header id="header" class="header">
 		<div class="content-box">
 			<a href="#content" class="is-aural is-focusable">Jump to content</a>
@@ -49,7 +49,7 @@
 						</li>
 						<li class="nav__item is-on"><a href="links.html">Components</a>
 							<ul class="nav__sub-items">
-								<li class="nav__sub-item"><a href="links.html">Links</a></li>
+								<li class="nav__sub-item is-on"><a href="links.html">Links</a></li>
 								<li class="nav__sub-item"><a href="buttons.html">Buttons</a></li>
 								<li class="nav__sub-item"><a href="button-groups.html">Button groups</a></li>
 								<li class="nav__sub-item"><a href="checkboxes.html">Checkboxes</a></li>
@@ -60,10 +60,10 @@
 								<li class="nav__sub-item"><a href="text-inputs-and-textarea.html">Text inputs and textarea</a></li>
 								<li class="nav__sub-item"><a href="number-inputs.html">Number inputs</a></li>
 								<li class="nav__sub-item"><a href="file-inputs.html">File inputs</a></li>
-								<li class="nav__sub-item is-on"><a href="messages.html">Messages</a></li>
+								<li class="nav__sub-item"><a href="messages.html">Messages</a></li>
 								<li class="nav__sub-item"><a href="language-selectors.html">Language selectors</a></li>
 								<li class="nav__sub-item"><a href="dialogs.html">Dialogs</a></li>
-								<li class="nav__sub-item"><a href="progress-indicators.html">Progress indicators</a></li>
+								<li class="nav__sub-item is-on"><a href="progress-indicators.html">Progress indicators</a></li>
 							</ul>
 						</li>
 						<!-- <li><a href="../patterns.html">Patterns</a></li> -->
@@ -74,54 +74,57 @@
 			<div class="col col--end">
 				<main id="content" class="content">
 					<div class="page__parent-title">Components</div>
-					<h1 class="page__title">Messages</h1>
-					<p class="page__lead">Messages to the user as system feedback can be delivered as block message with a longer explanation. The block messages, predominantly used in top or banner positions in the view are defined on this page. Or as inline message directly to an input component. For inline validation messages, see <a href="text-inputs-and-textarea.html#designing">designing text inputs</a>.</p>
+					<h1 class="page__title">Progress indicators</h1>
+					<p class="page__lead">Progress indicators signal an unexpected wait time or show the length of a process to the user.</p>
 					<figure class="components__intro">
-						<img src="../img/components/messages_notice.svg" alt="Block message of neutral type visual example">
+						<img src="../img/components/progress-indicators_intro.svg" alt="progress indicators visual example">
 					</figure>
 
 					<section id="using">
-						<h2>Using messages</h2>
-						<p>Messages must include a descriptive text or a combination of text and an icon. <span class="note note--inline note--a11y">Accessibility note:</span> An additional icon adds a point of recognition for color blind users.</p>
+						<h2>Using progress indicators</h2>
+						<p>Process indicators can show determinate or indeterminate progress. They indicate an ongoing system process Links must include a descriptive link text or a combination of the text and an additional icon.</p>
 					</section>
 					<section id="designing">
 						<h2>Designing</h2>
-						<p><strong>Message text</strong><br>
-							Message text should provide clear and short as possible feedback to the users and possibly provide next steps if available. </p>
-						<p><strong>Icon</strong><br>
-							Icons simplify user recognition and provide ability to shorten message text. Icons are limited to default pre-collection of each message type to ensure recognition.
+						<p><strong>Indicator</strong><br>
+							Choosing the right indicator type is dependent on context. </p>
+						<p><strong>Label</strong> <small class="is-subtle">(optional)</small><br>
+							Adding a descriptive label is additionally helpful on indicators like a determinate progress bar. It's meant to state clearly what's being progressed on and how far system is in progressing, for example by providing a percentage number.
 						</p>
-						<p>See <strong><a href="https://www.figma.com/file/2Jb1lVkhEMDFxO20I5xwyA/WikimediaUI-%E2%80%93-Components-library?node-id=217%3A172" target="_blank" rel="noopener">WikimediaUI Figma Messages component</a></strong>.</p>
+					</section>
+					<section id="states">
+						<h2>States of progress indicators</h2>
+						<p>The link styles outlined here were designed with accessible color variations to distinguish the link’s following visually separated interaction states: </p>
+						<figure class="components__states">
+							<img src="../img/components/progress-indicators_states.svg" alt="progress indicators states">
+							<figcaption class="figure__caption"></figcaption>
+						</figure>
 					</section>
 					<section id="types">
 						<h2>Types</h2>
-						<h3>Neutral or notice message</h3>
-						<figure class="components__intro">
-							<img src="../img/components/messages_notice.svg" alt="Block message of neutral type, visual example">
-						</figure>
-						<p>Neutral or notice block messages provide general user feedback. Accompany the message by the 'infoFilled' icon.</p>
+						<p></p>
 
-						<h3>Error message</h3>
+						<h3>Progress bars (elevated)</h3>
+						<p></p>
 						<figure class="components__intro">
-							<img src="../img/components/messages_error.svg" alt="Block message of error type, visual example">
+							<img src="../img/components/progress-bars-elevated_intro.svg" alt="Progress bars, visual example">
 						</figure>
-						<p>Error type feature the strongest visual priority of all system messages. Use to alert the user for immediate attention only needs. Accompany the message by the 'error' icon.</p>
 
-						<h3>Warning message</h3>
+						<h3>Progress bars (inline menus & dialogs)</h3>
+						<p></p>
 						<figure class="components__intro">
-							<img src="../img/components/messages_warning.svg" alt="Block message of error type, visual example">
+							<img src="../img/components/progress-bars-inline_intro.svg" alt="Progress bars, visual example">
 						</figure>
-						<p>Warning type provide important messages the user should be cautious about. Accompany the message by the 'warning' icon.</p>
 
-						<h3>Success message</h3>
+						<h3>Progress dots indicator (within views)</h3>
+						<p></p>
 						<figure class="components__intro">
-							<img src="../img/components/messages_success.svg" alt="Block message of error type, visual example">
+							<img src="../img/components/progress-dots_intro.svg" alt="Progress indicators, visual example">
 						</figure>
-						<p>Success type deliver feedback of a successful user interaction like publishing an article. Accompany the message by the 'success' icon.</p>
 					</section>
 					<section id="coding">
 						<h2>Coding</h2>
-						<p>See <a href="https://doc.wikimedia.org/oojs-ui/master/demos/?page=widgets&theme=wikimediaui&direction=ltr&platform=desktop#MessageWidget-type-notice" target="_blank" rel="noopener">OOUI's demos section of messages</a>.</p>
+						<p>See <a href="https://doc.wikimedia.org/oojs-ui/master/demos/?page=widgets&theme=wikimediaui&direction=ltr&platform=desktop#demo-section-progressBar" target="_blank" rel="noopener">OOUI's demos section of progress bars (determinate and indeterminate)</a>.</p>
 					</section>
 				</main>
 			</div>
